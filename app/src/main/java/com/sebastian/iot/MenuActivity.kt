@@ -12,7 +12,7 @@ class MenuActivity : AppCompatActivity() {
         val intento = intent
         val username: String? = intento.getStringExtra("datos")
         val titulo: TextView = findViewById(R.id.menu_title)
-        titulo.text = username.toString()
+        titulo.text = "Datos recibidos: " + username.toString()
     }
 
 }
