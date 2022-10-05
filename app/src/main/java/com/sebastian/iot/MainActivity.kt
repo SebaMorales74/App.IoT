@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         fun setName(usernameData:String){
             if (";" !in usernameData || usernameData == "") this.username = usernameData
             else this.username = "!Failed"}
+
         fun getName():String{ return(this.username) }
 
         //Get n Set Password
