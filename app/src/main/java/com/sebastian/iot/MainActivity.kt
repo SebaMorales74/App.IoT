@@ -15,18 +15,20 @@ class MainActivity : AppCompatActivity() {
 
         val userData = Data()
         var botonSubmit: Button = findViewById(R.id.login_button_login)
-        var usernameInput: EditText = findViewById(R.id.login_input_name)
-
-        userData.setName("Username")
-        userData.setPass("Contraseña")
-        userData.setCorreo("Correo")
+        val usernameInput: EditText = findViewById(R.id.login_input_name)
+        val passwordInput: EditText = findViewById(R.id.login_input_password)
+        val emailInput: EditText = findViewById(R.id.login_input_email)
 
         botonSubmit.setOnClickListener(View.OnClickListener {
+            userData.setName(usernameInput.text.toString())
+            userData.setPass(passwordInput.text.toString())
+            userData.setCorreo(emailInput.text.toString())
             val intent  = Intent(this, MenuActivity::class.java).apply {
                 putExtra("datos", userData.getAll())
             }
             startActivity(intent)
         })
+
     }
 
     class Data{

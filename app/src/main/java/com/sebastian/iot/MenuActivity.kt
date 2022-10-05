@@ -10,9 +10,10 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
         val intento = intent
-        val username: String? = intento.getStringExtra("datos")
+        val data: String? = intento.getStringExtra("datos")
         val titulo: TextView = findViewById(R.id.menu_title)
-        titulo.text = "Datos recibidos: " + username.toString()
+        if (data.equals("admin;admin;admin@email.com")) titulo.text = "Login exitoso!"
+        else titulo.text = "Credenciales no existentes"
     }
 
 }
