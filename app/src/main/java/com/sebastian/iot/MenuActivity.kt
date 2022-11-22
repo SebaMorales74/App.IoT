@@ -12,8 +12,8 @@ class MenuActivity : AppCompatActivity() {
         val intento = intent
         val data: String? = intento.getStringExtra("datos")
         val titulo: TextView = findViewById(R.id.menu_title)
-        if (data.equals("admin;admin;admin@email.com")) titulo.text = "Login exitoso!"
-        else titulo.text = "Credenciales no existentes"
+        if (data.equals("correcto")) titulo.text = "Login exitoso!"
+        else titulo.text = "Credenciales no existentes :("
     }
 
 }
